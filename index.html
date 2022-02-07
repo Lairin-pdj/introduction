@@ -3,30 +3,39 @@
 		<title>박동준의 코드 세상</title>
 		<meta charset="utf-8">
 		<meta name="author" content="박동준">
-		<meta name="viewport" content="width=divice-width">
+		<meta name="viewport" content="width=divice-width, initial-scale=1.0">
 		<link rel="stylesheet" href="./css/main.css">
-		<link rel="icon" href="./main_logo.png">
+		<link rel="icon" href="./images/main_logo.png">
 	</head>
 	<body>
-		<div class="intro">
-			<h1>Introduce</h1>
-			<p>나의 소개</p>
-		</div>
-		<hr>
-		<div class="content">
-			<h1>Content</h1>
-			<p>컨텐츠에 관한 내용</p>
-		</div>
-		<hr>
-		<div class="another">
+		<header>
+			<img src="./images/main_logo.png" class="logo"/>
+			<h1 class="main_title">박동준의 코드 세상</h1>
+			<nav>
+				<div class="nav_items">
+					<a href="#intro">Introduction</a>
+					<a href="#content">Content</a>
+				</div
+			</nav>
+		</header>
+		<section>
+			<h2>Section 영역</h2>
+			<div class="intro">
+				<a name="intro"></a>
+				<h4>Introduction</h4>
+				<p>나의 소개</p>
+			</div>
+			<div class="content">
+				<a name="content"></a>
+				<h4>Content</h4>
+				<p>컨텐츠에 관한 내용</p>
+			</div>
+		</section>
+		<footer>
+			<h2>Footer 영역</h2>
 			<a href="https://github.com/Lairin-pdj">github</a>
 			<br>
-			<a href="https://www.acmicpc.net/user/pdj9696">baekjoon</a>
-		</div>
-		<script>
-			document.addEventListener('click', function(){
-				alert('Clicked!');
-			});
-		</script>
+			<a href="https://www.acmicpc.net/user/pdj9696">beakjoon</a>
+		</footer>
 	</body>
 </html>
