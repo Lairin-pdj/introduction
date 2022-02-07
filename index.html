@@ -1,97 +1,32 @@
 <html>
 	<head>
-		<title>Code World</title>
+		<title>박동준의 코드 세상</title>
 		<meta charset="utf-8">
 		<meta name="author" content="박동준">
+		<meta name="viewport" content="width=divice-width">
+		<link rel="stylesheet" href="./css/main.css">
+		<link rel="icon" href="./main_logo.png">
 	</head>
-	<body class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>Welcome to code world!</h1>
-						<p>webpage for introduction</p>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">Features</a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Introduction</h2>
-										</header>
-										<p>Hi! My name is Park Dong jun. </br>I live in Seoul, South Korea. </br>I'm attending university and majoring in computer science.</p>
-									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-								</div>
-							</section>
-
-						<!-- First Section -->
-							<section id="first" class="main special">
-								<header class="major">
-									<h2>Features</h2>
-								</header>
-								<ul class="features">
-									<li>
-										<span class="icon solid major style1 fa-code"></span>
-										<h3>Code</h3>
-										<p>I can coding everything!</p>
-									</li>
-									<li>
-										<span class="icon major style3 fa-copy"></span>
-										<h3>Robot</h3>
-										<p>I like make robot or robot coding.</p>
-									</li>
-									<li>
-										<span class="icon major style5 fa-gem"></span>
-										<h3>Game</h3>
-										<p>I like most games.</p>
-									</li>
-								</ul>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Review</h2>
-							<p>Creating HTML pages was more fun than I thought, and I felt that github was providing good features. I want to use this in the future to make something more interesting.</p>
-						</section>
-						<section>
-							<h2>Information</h2>
-							<dl class="alt">
-								<dt>Address</dt>
-								<dd>Gangdong, Seoul, South Korea</dd>
-								<dt>Phone</dt>
-								<dd>(082) 010-6373-3738</dd>
-								<dt>Email</dt>
-								<dd>pdj9696@naver.com</dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="https://github.com/Lairin-pdj" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-							</ul>
-						</section>
-					</footer>
-			</div>
+	<body>
+		<div class="intro">
+			<h1>Introduce</h1>
+			<p>나의 소개</p>
+		</div>
+		<hr>
+		<div class="content">
+			<h1>Content</h1>
+			<p>컨텐츠에 관한 내용</p>
+		</div>
+		<hr>
+		<div class="another">
+			<a href="https://github.com/Lairin-pdj">github</a>
+			<br>
+			<a href="https://www.acmicpc.net/user/pdj9696">baekjoon</a>
+		</div>
+		<script>
+			document.addEventListener('click', function(){
+				alert('Clicked!');
+			});
+		</script>
 	</body>
 </html>
