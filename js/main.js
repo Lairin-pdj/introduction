@@ -1,9 +1,10 @@
-const header = document.querySelector("header");
-const headerheight = header.clientHeight;
+const main = document.querySelector("main");
+const mainheight = main.clientHeight;
+/*
 document.addEventListener('scroll', function(){
     const scrollposition = scrollY;
     const nav = document.querySelector("nav");
-    const check = headerheight - nav.clientHeight;
+    const check = mainheight - nav.clientHeight;
     if (check <= scrollposition){
         nav.classList.add('fix');
     }
@@ -11,3 +12,4 @@ document.addEventListener('scroll', function(){
         nav.classList.remove('fix');
     }
 });
+*/

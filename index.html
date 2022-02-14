@@ -9,34 +9,22 @@
 		<script defer src="./js/main.js?ver=1"></script>
 	</head>
 	<body>
-		<header>
-			<img src="./images/main_logo.png" class="logo"/>
-			<h1 class="main_title">박동준의 코드 세상</h1>
-			<nav>
-				<ul class="nav_items">
-					<li><a href="#intro">Introduction</a></li>
-					<li><a href="#tech">Tech</a>
-						<ul>
-							<li><a href="#">사용언어</a></li>
-							<li><a href="#">기술스택</a></li>
-							<li><a href="#">자격증</a></li>
-						</ul>
-					</li>
-					<li><a href="#result">Result</a>
-						<ul>
-							<li><a href="#">아두이노</a></li>
-							<li><a href="#">ev3</a></li>
-							<li><a href="#">인공지능</a></li>
-							<li><a href="#">ar가구시뮬</a></li>
-							<li><a href="#">웹게임</a></li>
-						</ul>
-					</li>
-					<li><a href="#close">Close</a></li>
-				</ul>
-			</nav>
-		</header>
-		<section>
-			<h2>Section 영역</h2>
+		<div class="nav">
+			<ul class="nav_items">
+				<li><a href="#main">Main</a></li>
+				<li><a href="#intro">Intro</a></li>
+				<li><a href="#tech">Tech</a></li>
+				<li><a href="#result">Result</a></li>
+				<li><a href="#close">Close</a></li>
+			</ul>
+		</div>
+		<div class="container">
+			<div class="main">
+				<a name="main"></a>
+				<img src="./images/main_image.png" class="logo"/>
+				<h1 class="main_title">박동준의 코드 세상</h1>
+				<p class="main_story">다양한 코드의 속으로 빠져들어보는 시간</p>
+			</div>
 			<div class="intro">
 				<a name="intro"></a>
 				<h4>Introduction</h4>
@@ -68,12 +56,11 @@
 				<h4>Close</h4>
 				<p>나는 이런 사람</p>
 			</div>
-		</section>
-		<footer>
-			<h2>Footer 영역</h2>
-			<a href="https://github.com/Lairin-pdj">github_link</a>
-			<a href="https://www.acmicpc.net/user/pdj9696">beakjoon_link</a>
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		</footer>
+			<footer>
+				<h2>Footer 영역</h2>
+				<a href="https://github.com/Lairin-pdj">github_link</a>
+				<a href="https://www.acmicpc.net/user/pdj9696">beakjoon_link</a>
+			</footer>
+		</div>
 	</body>
 </html>

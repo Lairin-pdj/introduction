@@ -1,51 +1,104 @@
-body{ 
-	font-family: sans-serif;
-	background-color: #E1BEE7;
-	margin: 0;
+html{
+	scroll-behavior: smooth;
 }
 
-header{
+body{ 
+	overflow-x: hidden;
+	font-family: sans-serif;
+	margin: 0;
+}
+ 
+body::-webkit-scrollbar{
+	width: 0px;
+}
+
+/*
+// 아직 미해결
+body::-webkit-scrollbar-thumb{
+	background-color: gray;
+	width: 10px;
+	border-radius: 20px;
+	background-clip: padding-box;
+	border: 4px solid transparent;
+	box-shadow: inset 0px 0px 5px white;
+}
+
+body::-webkit-scrollbar-track{
+	display: none;
+}
+*/
+
+.main{
 	width: 100%;
-	height: 450px;
-	margin: 0 auto;
+	height: 100%;
+	margin: 0;
 	border: 0;
 	padding: 0;
-	display: block;
-	text-align: center;
+	align-items: center;
+	background: url("../images/main_background_image.gif") no-repeat;
+	background-size: cover;
+}
+
+.main::before{
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: black;
+	opacity: 0.5;
 }
 
 .logo{
-	margin-top: 100px;
-	width: 100px;
-	height: 100px;
+	position: absolute;
+	left: 50%;
+	top: 35%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	height: 300px;
 	object-fit: fill;
 }
 
 .main_title{
-	margin-top: 50px;
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	color: white;
 }
 
-nav{
-	display: block;
-	align-self: center;
+.main_story{
+	position: absolute;
+	left: 50%;
+	top: 65%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+
+.nav{
+	position: fixed;
+	margin-right: 20px;
+	right: 0%;
+	top: 50%;
+	transform: translate(0%, -50%);
 	background-color: #F7F7F7;
 	border-radius: 15px;
-	height: 80px;
-	width: 950px;
-	margin: auto;
-	margin-top: 80px;
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.nav:hover{
+	opacity: 1;
 }
 
 a{
 	text-decoration: none;
 }
 
-a:hover{
-	text-decoration: underline;
-}
-
 ul{
 	list-style-type: none;
+	text-align: center;
 	margin: 0;
 	padding: 0;
 }
@@ -53,11 +106,11 @@ ul{
 li a{
 	background-color: bisque;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 12px;
 	display: block;
 	border-radius: 15px;
 	line-height: 60px;
-	width: 160px;
+	width: 60px;
 	height: 60px;
 }
 
@@ -65,58 +118,6 @@ li a:hover{
 	background-color: aqua;
 }
 
-.nav_items{
-	display: flex;
-	justify-content: center;
-}
-
 .nav_items > li{
-	float: left;
-	padding: 10px;
-}
-
-.nav_items li ul{
-	display: none;
-	border-radius: 0;
-}
-
-.nav_items li:hover ul{
-	display: block;
-	animation-name: padein;
-	animation-duration: 1s;
-}
-
-@keyframes padein{
-	from{
-		opacity: 0;
-	}
-	to{
-		opacity: 1;
-	}
-}
-
-.fix{
-	position: fixed;
-	top: 0%;
-	left: 50%;
-	transform: translate(-50%, 0%);
-	margin: 0;
-	padding: 0;
-}
-
-section{
-	display: block;
-	margin: auto;
-	background-color: aliceblue;
-	border-radius: 15px;
-	width: 950px;
-	min-height: auto;
-}
-
-footer{
-	display: block;
-	margin: auto;
-	border-radius: 15px;
-	width: 950px;
-	min-height: auto;
+	padding: 5px;
 }
