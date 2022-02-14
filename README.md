@@ -8,3 +8,7 @@ https://lairin-pdj.github.io/introduction/
 전반적인 레이아웃 구축  
 네비바 호버 애니메이션  
 네비바 스크롤 감지 이동  
+  
+  
+2 주차
+전체적인 구조 개선
