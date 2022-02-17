@@ -3,7 +3,7 @@ function moblie(){
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 if (moblie()) {
-    alert("해당 홈페이지는 pc 기준으로 작성되었습니다. 모바일에서는 제대로 작동하지 않을 수 있습니다.");s
+    alert("해당 홈페이지는 pc 기준으로 작성되었습니다. 모바일에서는 제대로 작동하지 않을 수 있습니다.");
 }
 
 window.onload = function(){
@@ -54,7 +54,6 @@ window.onload = function(){
         const check = parseInt((scrollY - (mainheight * 0.1)) / mainheight) * 2 + 3;
         if (temp != check){
             temp = check;
-            console.log(temp);
             container.childNodes[check].classList.add("content-slide");
         }
 
