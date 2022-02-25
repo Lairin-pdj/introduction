@@ -1,4 +1,4 @@
-html{
+html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 	margin: 0;
@@ -6,20 +6,20 @@ html{
 	border: 0;
 }
 
-body{ 
+body { 
 	font-family: sans-serif;
 	margin: 0;
 	padding: 0;
 	border: 0;
 }
  
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
 	width: 0px;
 }
 
 /*
 // 아직 미해결
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
 	background-color: gray;
 	width: 10px;
 	border-radius: 20px;
@@ -28,7 +28,7 @@ body::-webkit-scrollbar-thumb{
 	box-shadow: inset 0px 0px 5px white;
 }
 
-body::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track {
 	display: none;
 }
 */
@@ -47,7 +47,7 @@ body::-webkit-scrollbar-track{
 	text-align: center;
 }
 
-.scrolled-indicator{
+.scrolled-indicator {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -58,14 +58,14 @@ body::-webkit-scrollbar-track{
 	z-index:90;
 }
 
-.scrolled-indicator-fill{
+.scrolled-indicator-fill {
 	width: 0%;
 	height: 100%;
 	border-radius: 2px;
 	background-color: #f3f3f3;
 }
 
-.nav{
+.nav {
 	display: none;
 	position: fixed;
 	margin-right: 20px;
@@ -78,22 +78,22 @@ body::-webkit-scrollbar-track{
 	opacity: 0.7;
 }
 
-.nav:hover{
+.nav:hover {
 	opacity: 1;
 }
 
-a{
+a {
 	text-decoration: none;
 }
 
-ul{
+ul {
 	list-style-type: none;
 	text-align: center;
 	margin: 0;
 	padding: 0;
 }
 
-li a{
+li a {
 	background-color: bisque;
 	font-weight: bold;
 	font-size: 12px;
@@ -105,29 +105,29 @@ li a{
 	height: 60px;
 }
 
-li a:hover{
+li a:hover {
 	background-color: aqua;
 }
 
-.nav_items > li{
+.nav_items > li {
 	padding: 5px;
 }
 
-.move_navin{
+.move_navin {
 	display: block;
 	animation-name: slidein;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 }
 
-.move_navout{
+.move_navout {
 	display: block;
 	animation-name: slideout;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
 }
 
-@keyframes slidein{
+@keyframes slidein {
 	from{
 		right: -40%;
 	}
@@ -136,7 +136,7 @@ li a:hover{
 	}
 }
 
-@keyframes slideout{
+@keyframes slideout {
 	from{
 		right: 0%;
 	}
@@ -145,7 +145,7 @@ li a:hover{
 	}
 }
 
-.main{
+.main {
 	width: 100%;
 	height: 100%;
 	margin: 0;
@@ -156,7 +156,7 @@ li a:hover{
 	background-size: cover;
 }
 
-.main::before{
+.main::before {
 	content: "";
 	position: absolute;
 	top: 0px;
@@ -167,7 +167,7 @@ li a:hover{
 	opacity: 0.5;
 }
 
-.logo{
+.logo {
 	animation-name: popup-logo;
 	animation-duration: 2s;
 	position: absolute;
@@ -179,7 +179,7 @@ li a:hover{
 	object-fit: fill;
 }
 
-.main_title{
+.main_title {
 	animation-name: popup-opa;
 	animation-duration: 3s;
 	position: absolute;
@@ -189,7 +189,7 @@ li a:hover{
 	color: white;
 }
 
-.main_story{
+.main_story {
 	animation-name: popup-opa;
 	animation-duration: 3s;
 	position: absolute;
@@ -200,7 +200,7 @@ li a:hover{
 	color: white;
 }
 
-@keyframes popup-logo{
+@keyframes popup-logo {
 	from{
 		width: 0%;
 		height: 0%;
@@ -211,7 +211,7 @@ li a:hover{
 	}
 }
 
-@keyframes popup-opa{
+@keyframes popup-opa {
 	from{
 		opacity: 0;
 	}
@@ -220,20 +220,20 @@ li a:hover{
 	}
 }
 
-.scroll-link{ 
+.scroll-link { 
 	position: absolute;
 	bottom: 3rem; 
 	left: 50%; 
 	transform: translateX(-50%);
 } 
 
-.mouse{ 
+.mouse { 
 	max-width: 2.5rem;
 	width: 100%; 
 	height: auto;
 }
 
-.scroll{
+.scroll {
 	animation-name: scroll; 
 	animation-duration: 1.5s; 
 	animation-timing-function: cubic-bezier(0.650, -0.550, 0.250, 1.500); 
@@ -243,7 +243,7 @@ li a:hover{
 	opacity: 1; 
 }
 
-@keyframes scroll{ 
+@keyframes scroll { 
 	0%, 20%{ 
 		transform: translateY(0) scaleY(1); 
 	}
@@ -253,12 +253,10 @@ li a:hover{
 	}
 }
 
-.intro{
-	visibility: hidden;
+.intro {
 	display: grid;
 	width: 100%;
 	height: 100%;
-	margin: 0;
 	padding: 0;
 	place-content: center;
 	line-height: 50%;
@@ -266,12 +264,34 @@ li a:hover{
 	background-color: blueviolet;
 }
 
-.tech{
-	visibility: hidden;
+.scroll-wrap {
+	overflow-x: auto; 
+	margin-left: 10%;
+	margin-right: 10%;
+	white-space: nowrap; 
+	font-size: 0
+}
+
+.scroll-element {
+	display: inline-block; 
+	width: 400px; 
+	height: 400px; 
+	border: 2px solid #222; 
+	background: #fff; 
+	font-size: 16px; 
+	line-height: 150px; 
+	text-align: center;
+}
+
+.scroll-wrap::-webkit-scrollbar {
+	width: 0px;
+}
+
+
+.tech {
 	display: grid;
 	width: 100%;
 	height: 100%;
-	margin: 0;
 	padding: 0;
 	place-content: center;
 	line-height: 50%;
@@ -279,12 +299,10 @@ li a:hover{
 	background-color: yellow;
 }
 
-.result{
-	visibility: hidden;
+.result {
 	display: grid;
 	width: 100%;
 	height: 100%;
-	margin: 0;
 	padding: 0;
 	place-content: center;
 	line-height: 50%;
@@ -292,30 +310,13 @@ li a:hover{
 	background-color: green;
 }
 
-.close{
-	visibility: hidden;
+.close {
 	display: grid;
 	width: 100%;
 	height: 100%;
-	margin: 0;
 	padding: 0;
 	place-content: center;
 	line-height: 50%;
 	text-align: center;
 	background-color: orangered;
-}
-
-.content-slide{
-	visibility: visible;
-	animation-name: content-slide;
-	animation-duration: 2s;
-}
-
-@keyframes content-slide{ 
-	from{
-		width: 0%;
-	}
-	to{
-		width: 100%;
-	}
 }

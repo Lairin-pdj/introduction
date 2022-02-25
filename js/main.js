@@ -1,5 +1,5 @@
 // 모바일 경고 알람
-function moblie(){
+function moblie() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 if (moblie()) {
@@ -24,17 +24,16 @@ window.onload = function(){
 
     // 컨테이너
     const container = document.querySelector(".container");
-    var temp = 0;
 
     // 스크롤 이벤트
     document.addEventListener('scroll', function(){
 
         // 네비바 출력 체크
-        if (scrollY != 0){
+        if (scrollY != 0) {
             nav.classList.add("move_navin");
             nav.classList.remove("move_navout");
         }
-        else{
+        else {
             nav.classList.add("move_navout");
             nav.classList.remove("move_navin");
         }
@@ -42,7 +41,7 @@ window.onload = function(){
         // 네비바 하이라이트
         const target = parseInt((scrollY + (mainheight * 0.2)) / mainheight) * 2 + 1;
         for (var i = 1; i < 10; i += 2){
-            if (i == target){
+            if (i == target) {
                 navs.childNodes[i].childNodes[0].style.color = "red";
             }
             else{
@@ -51,15 +50,46 @@ window.onload = function(){
         }
 
         // 위치 체킹 내용물 출력
-        const check = parseInt((scrollY - (mainheight * 0.1)) / mainheight) * 2 + 3;
-        if (temp != check){
-            temp = check;
-            container.childNodes[check].classList.add("content-slide");
+        const check = parseInt(scrollY / mainheight) * 2 + 3;
+        if (check < 10){
+            container.childNodes[check].style.marginLeft = `${(Math.min(100, ((scrollY % mainheight) * 2 / mainheight) * 100)) - 100}%`;
         }
-
+    
         // 프로그래스바
         const scrollable = document.documentElement.scrollHeight - mainheight;
         percent = Math.ceil((scrollY / scrollable) * 100);
         indicator.style.width = `${percent}%`;
+    });
+
+    // 이미지 드래그 체킹용
+    const slider = document.querySelector('.scroll-wrap');
+    let isMouseDown = false;
+    let startX, scrollLeft;
+
+    slider.addEventListener('mousedown', (e) => {
+        isMouseDown = true;
+        slider.classList.add('active');
+
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+        isMouseDown = false;
+        slider.classList.remove('active');
+    });
+    
+    slider.addEventListener('mouseup', () => {
+        isMouseDown = false;
+        slider.classList.remove('active');
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+        if (!isMouseDown) return;
+
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1;
+        slider.scrollLeft = scrollLeft - walk;
     });
 }
