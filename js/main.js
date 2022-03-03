@@ -116,11 +116,11 @@ window.onload = function(){
         
         window.scrollTo(0, page * mainheight);
     });
-    /*
+    
     // 네비바 클릭이벤트 페이지 조절
     document.onclick = function (e) {
         e = e || window.event;
-        var element = e.target || e.srcElement;
+        var element = e.target;
       
         if (element.tagName == 'A') {
             var name = element.outerText
@@ -141,5 +141,4 @@ window.onload = function(){
             }
         }
     };
-    */
 }
