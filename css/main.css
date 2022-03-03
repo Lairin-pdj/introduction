@@ -264,30 +264,6 @@ li a:hover {
 	background-color: blueviolet;
 }
 
-.scroll-wrap {
-	overflow-x: auto; 
-	margin-left: 10%;
-	margin-right: 10%;
-	white-space: nowrap; 
-	font-size: 0
-}
-
-.scroll-element {
-	display: inline-block; 
-	width: 400px; 
-	height: 400px; 
-	border: 2px solid #222; 
-	background: #fff; 
-	font-size: 16px; 
-	line-height: 150px; 
-	text-align: center;
-}
-
-.scroll-wrap::-webkit-scrollbar {
-	width: 0px;
-}
-
-
 .tech {
 	display: grid;
 	width: 100%;
@@ -308,6 +284,29 @@ li a:hover {
 	line-height: 50%;
 	text-align: center;
 	background-color: green;
+}
+
+.scroll-wrap {
+	overflow-x: auto; 
+	margin-left: 10%;
+	margin-right: 10%;
+	white-space: nowrap; 
+	font-size: 0
+}
+
+.scroll-element {
+	display: inline-block; 
+	width: 400px; 
+	height: 400px; 
+	border: 2px solid #222; 
+	background: #fff; 
+	font-size: 16px; 
+	line-height: 368px; 
+	text-align: center;
+}
+
+.scroll-wrap::-webkit-scrollbar {
+	width: 0px;
 }
 
 .close {

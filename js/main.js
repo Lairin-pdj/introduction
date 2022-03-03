@@ -92,4 +92,53 @@ window.onload = function(){
         const walk = (x - startX) * 1;
         slider.scrollLeft = scrollLeft - walk;
     });
+
+    // 스크롤 페이지 단위 이동
+    const html = document.querySelector(".html");
+    var page = parseInt(scrollY / mainheight);
+    const lastPage = 4;
+
+    window.addEventListener("wheel", function(e){
+        e.preventDefault();
+    },{passive : false});
+
+    window.addEventListener("wheel", function(e){
+
+        if(e.deltaY > 0){
+            if(page == lastPage) return;
+     
+            page++;
+        }else if(e.deltaY < 0){
+            if(page == 0) return;
+     
+            page--;
+        }
+        
+        window.scrollTo(0, page * mainheight);
+    });
+
+    // 네비바 클릭이벤트 페이지 조절
+    document.onclick = function (e) {
+        e = e || window.event;
+        var element = e.target || e.srcElement;
+      
+        if (element.tagName == 'A') {
+            var name = element.outerText
+            if (name == "Main") {
+                page = 0
+            }
+            else if (name == "Intro") {
+                page = 1
+            }
+            else if (name == "Tech") {
+                page = 2
+            }
+            else if (name == "Result") {
+                page = 3
+            }
+            else if (name == "Close") {
+                page = 4
+            }
+        }
+    };
 }
