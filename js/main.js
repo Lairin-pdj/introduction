@@ -87,7 +87,7 @@ window.onload = function(){
     slider.addEventListener('mousemove', (e) => {
         if (!isMouseDown) return;
 
-        e.preventDefault();
+        //e.preventDefault();
         const x = e.pageX - slider.offsetLeft;
         const walk = (x - startX) * 1;
         slider.scrollLeft = scrollLeft - walk;
@@ -97,30 +97,36 @@ window.onload = function(){
     const html = document.querySelector(".html");
     var page = parseInt(scrollY / mainheight);
     const lastPage = 4;
+    var stack = 0
 
     window.addEventListener("wheel", function(e){
         e.preventDefault();
     },{passive : false});
 
     window.addEventListener("wheel", function(e){
+        stack += e.deltaY;
 
-        if(e.deltaY > 0){
+        if(stack > 600){
+            stack = 0
+
             if(page == lastPage) return;
      
             page++;
-        }else if(e.deltaY < 0){
+        }else if(stack < -600){
+            stack = 0
+
             if(page == 0) return;
-     
+
             page--;
         }
         
         window.scrollTo(0, page * mainheight);
     });
-    
+
     // 네비바 클릭이벤트 페이지 조절
     document.onclick = function (e) {
         e = e || window.event;
-        var element = e.target;
+        var element = e.target || e.srcElement;
       
         if (element.tagName == 'A') {
             var name = element.outerText
@@ -141,4 +147,24 @@ window.onload = function(){
             }
         }
     };
+
+    // 키보드 인식
+    window.addEventListener("keydown", function (e) {
+        if (e.key == "ArrowUp") {
+            e.preventDefault()
+
+            if(page == 0) return;
+     
+            page--;
+            window.scrollTo(0, page * mainheight);
+        }
+        else if (e.key == "ArrowDown") {
+            e.preventDefault()
+
+            if(page == lastPage) return;
+     
+            page++;
+            window.scrollTo(0, page * mainheight);
+        }
+    }, {passive : false});
 }
